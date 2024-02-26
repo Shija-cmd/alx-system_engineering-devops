@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
-# but for the 9th iteration, displays Best School and then Hi on a new line.
+# This script is displaying "Best School" 10 times but for the 9th iteration, displays Best School and then Hi on a new line.
 COUNTER=0
 while [ $COUNTER -lt 11 ]
 do
