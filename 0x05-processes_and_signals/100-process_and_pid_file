@@ -11,7 +11,7 @@ sleep() {
   ! read -rt "$1"
 } <> <(:)
 
-echo "$$" >| "${pidfile:=/var/run/holbertonscript.pid}"
+echo "$$" >| "${pidfile:=/var/run/myscript.pid}"
 
 trap '
   echo "Y U no love me?!"
