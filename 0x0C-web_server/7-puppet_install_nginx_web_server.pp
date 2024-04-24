@@ -3,10 +3,10 @@
 package { 'nginx':
 provider => 'apt',
 }
-exec {'hlbtn_page':
+exec {'redirect_me':
 command => '/usr/bin/sudo /bin/echo Hello World > /var/www/html/index.nginx-debian.html',
 }
-exec {'redirect_page':
+exec {'redirect_me':
 
 command => '/usr/bin/sudo /bin/sed -i "66i rewrite ^/redirect_me https://www.youtube.com/ permanent;" /etc/nginx/sites-available/default',
 }
