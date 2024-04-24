@@ -3,7 +3,7 @@
 package { 'nginx':
 provider => 'apt',
 }
-exec {'redirect_me':
+exec {'hlbtn_page':
 command => '/usr/bin/sudo /bin/echo Hello World > /var/www/html/index.nginx-debian.html',
 }
 exec {'redirect_page':
