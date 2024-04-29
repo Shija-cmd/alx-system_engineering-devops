@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# configuring a new HAproxy as a load balancer
+
+# Installing a  HAproxy on a server
+apt-get -y update
+apt-get -y install haproxy=2.0.33\*
+
+# Configuring haproxy configuration file to distribute requests using a roundrobin algorithm
+echo '
+frontend shija.tech
+        bind 0:80
+        default_backend web_servers
+
+backend web_servers
+        balance roundrobin
+        server 170119-web-01 52.90.12.252:80
+        server 170119-web-02 54.237.20.143:80
+' >> /etc/haproxy/haproxy.cfg
+
+# Restarting HAproxy service
+service haproxy restart
