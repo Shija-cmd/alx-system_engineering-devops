@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Bash script that configures a server to listen to port 80
+#this is a spam
+#this is a spam
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+service nginx restart
